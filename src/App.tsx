@@ -1,8 +1,22 @@
+import { Home } from './pages/Home';
+import { NewRoom } from './pages/NewRoom';
+
+import { BrowserRouter, Route } from 'react-router-dom';
+
+import { AuthContextProvider } from './contexts/AuthContext';
+
 // Adicionar dominio da Vercel no Firebase authentication
 function App() {
-  return (
-    <h1>Olá mundo</h1>
-  );
+	
+
+	return (
+		<BrowserRouter>
+      <AuthContextProvider>
+				<Route path="/" exact component={Home} />
+				<Route path="/rooms/new" component={NewRoom} />
+			</AuthContextProvider>
+		</BrowserRouter>
+	);
 }
 
 export default App;
