@@ -7,10 +7,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { AuthContextProvider } from './contexts/AuthContext';
 import { AdminRoom } from './pages/AdminRoom';
 
-// Adicionar dominio da Vercel no Firebase authentication
 function App() {
-	
-
 	return (
 		<BrowserRouter>
 			<AuthContextProvider>
